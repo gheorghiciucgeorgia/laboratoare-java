@@ -145,5 +145,6 @@ public class MainFrame {
         Graphics g = selectedAreaPanel.getGraphics();
         g.clearRect(0, 0, 221, 289);
         g.drawImage(bufferedImage, 0, 0, null);
+        //jbhbm
     }
 }
