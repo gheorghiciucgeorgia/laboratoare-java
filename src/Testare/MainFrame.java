@@ -81,7 +81,9 @@ public class MainFrame {
 			try {
 				FileOutputStream g = new FileOutputStream("output.txt");
 				gout = new PrintStream(g);
+				//printare fisier
 				gout.println(" "+msg);
+				//printare consola
 				System.out.println(msg);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
