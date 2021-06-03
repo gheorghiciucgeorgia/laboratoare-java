@@ -40,6 +40,7 @@ public class ImagePanel extends JPanel {
                         shape = makeRectangle(startDrag.x, startDrag.y, e.getX(),
                                 e.getY());
                         mf.updateSelectedRegion(image.getSubimage(startDrag.x, startDrag.y, e.getX()-startDrag.x, e.getY()-startDrag.y));   
+                        System.out.println("Punct de start: "+startDrag.x+","+startDrag.y+"."+ "Punct de sfarsit: "+endDrag.x+","+endDrag.y+" .");
                         startDrag = null;
                         endDrag = null;
                         repaint();
@@ -81,13 +82,15 @@ public class ImagePanel extends JPanel {
             Shape r = makeRectangle(startDrag.x, startDrag.y, endDrag.x,
                     endDrag.y);
             g2.draw(r);
+           
         }
         
     }
 
     private Rectangle2D.Float makeRectangle(int x1, int y1, int x2, int y2) {
-        return new Rectangle2D.Float(Math.min(x1, x2), Math.min(y1, y2),
+    	return new Rectangle2D.Float(Math.min(x1, x2), Math.min(y1, y2),
                 Math.abs(x1 - x2), Math.abs(y1 - y2));
+        
     }
     
 }

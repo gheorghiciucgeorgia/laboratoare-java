@@ -82,6 +82,7 @@ public class MainFrame {
 				FileOutputStream g = new FileOutputStream("output.txt");
 				gout = new PrintStream(g);
 				gout.println(" "+msg);
+				System.out.println(msg);
 			} catch (FileNotFoundException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
@@ -104,7 +105,7 @@ public class MainFrame {
    
         
         // Image Panel display image with graphics
-        mainPanel = new ImagePanel(imagePath[0], mfr);
+        mainPanel = new ImagePanel(imagePath[contor], mfr);
         
         mainPanel.setBounds(10, 11, 449, 314);
         frmSelectAreaIn.getContentPane().add(mainPanel);
@@ -145,6 +146,6 @@ public class MainFrame {
         Graphics g = selectedAreaPanel.getGraphics();
         g.clearRect(0, 0, 221, 289);
         g.drawImage(bufferedImage, 0, 0, null);
-        //jbhbm
+        
     }
 }
