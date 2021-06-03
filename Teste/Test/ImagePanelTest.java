@@ -1,31 +1,39 @@
 package Test;
 
+import static org.junit.Assert.*;
+
+import java.io.IOException;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import Testare.MainFrame;
 
 public class ImagePanelTest {
 
 	@Before
 	public void setUp() throws Exception {
-	
+		System.out.println("incepere testare");
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		
+		System.out.println("sfarsit testare");
 	}
 
 	@Test
-	public void testImagePanel() {
+	public void testImagePanel() throws IOException {
 		//fail("Not yet implemented");
-		
+		MainFrame mf=new MainFrame();
+		assertNotNull(mf);
+		System.out.println("Verificare ImagePanel");
 	}
 
 	@Test
 	public void testPaintComponentGraphics() {
 		//fail("Not yet implemented");
-		
+		System.out.println("Verificare TestPaintComponent");
 	}
 	
 	/*@Test

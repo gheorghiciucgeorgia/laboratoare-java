@@ -14,17 +14,18 @@ public class MainFrameTest {
 
 	@Before
 	public void setUp() throws Exception {
-		
+		System.out.println("incepere testare");
 	}
 
 	@After
 	public void tearDown() throws Exception {
-		
+		System.out.println("sfarsit testare");
 	}
 
 	@Test
 	public void testMain() {
 		//fail("Not yet implemented");
+		System.out.println("Verificare Main");
 	}
 
 	@Test
@@ -32,12 +33,14 @@ public class MainFrameTest {
 		//fail("Not yet implemented");
 		MainFrame window = new MainFrame();
 		assertNotNull(window.imagePath);
+		System.out.println("Verificare MainFrame");
 	}
 
 	@Test
 	public void testUpdateSelectedRegion() {
 		//fail("Not yet implemented");
 		//Graphics g = selectedAreaPanel.getGraphics();
+		System.out.println("Verificare UpdateSelectedRegion");
 	}
 
 }

@@ -58,7 +58,7 @@ public class MainFrame {
     private void initialize() throws IOException {
         frmSelectAreaIn = new JFrame();
         frmSelectAreaIn.setTitle("Select Area In Image");
-        frmSelectAreaIn.setBounds(100, 100, 708, 370);
+        frmSelectAreaIn.setBounds(100, 100, 950, 500);
         frmSelectAreaIn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frmSelectAreaIn.getContentPane().setLayout(null);
         
