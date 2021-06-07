@@ -26,9 +26,7 @@ public class MainFrame {
     private JTextField textField;
     public String[] imagePath={"images\\car1.jpg","images\\car2.jpg","images\\car3.jpg","images\\car4.jpg","images\\car5.jpg","images\\car6.jpg","images\\car7.jpg"};
     int contor=0;
-    /**
-     * Launch the application.
-     */
+    
     public static void main(String[] args) {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -44,15 +42,15 @@ public class MainFrame {
     }
 
     /**
-     * Create the application.
-     * @throws IOException 
+     * Initializarea aplicatiei
+     * @throws IOException Verificarea existentei unui comentariu al utilizatorului
      */
     public MainFrame() throws IOException {
         initialize();
     }
 
     /**
-     * Initialize the contents of the frame.
+     * Inițializarea conținutului frame-ului.
      * @throws IOException 
      */
     private void initialize() throws IOException {
@@ -66,7 +64,9 @@ public class MainFrame {
 		textField.setBounds(30, 339, 900, 32);
 		frmSelectAreaIn.getContentPane().add(textField);
 		textField.setColumns(10);
-		
+		/**
+		 * Butonul Okbtn printeaza comentariul utilizatorului.
+		 */
 		JButton Okbtn = new JButton("Ok");
 		Okbtn.setForeground(new Color(240, 255, 255));
 		Okbtn.setBackground(new Color(65, 105, 225));
@@ -94,7 +94,9 @@ public class MainFrame {
 		});
 	Okbtn.setBounds(200, 391, 97, 25);
 	frmSelectAreaIn.getContentPane().add(Okbtn);
-	
+	/**
+	 * Butonul Nextbtn este butonul cu ajutorul caruia schimbam pozele
+	 */
 	JButton Nextbtn = new JButton("Next");
 	Nextbtn.setForeground(new Color(240, 255, 255));
 	Nextbtn.setBackground(new Color(65, 105, 225));
@@ -143,7 +145,10 @@ public class MainFrame {
     }
 
 
-    // function to update selected region of the image
+    /**
+     * Funcție pentru actualizarea regiunii selectate
+     * @param bufferedImage Resetarea la culorile initiale a zonei selectate.
+     */
     public void updateSelectedRegion(BufferedImage bufferedImage) {
         Graphics g = selectedAreaPanel.getGraphics();
         g.clearRect(0, 0, 221, 289);
